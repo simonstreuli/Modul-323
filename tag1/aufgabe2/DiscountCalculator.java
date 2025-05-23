@@ -1,4 +1,4 @@
-package aufgabe3;
+package aufgabe2;
 
 import java.util.List;
 

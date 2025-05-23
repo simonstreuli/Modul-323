@@ -2,7 +2,7 @@ package aufgabe1;
 
 public class aufgabe1 {
     public static void main(String[] args) {
-        System.out.println(wordScore("asdasd"));
+        System.out.println(wordScore("noris"));
         System.out.println(calculateScore("noris"));
     }
 
