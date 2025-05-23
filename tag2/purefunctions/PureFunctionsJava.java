@@ -37,6 +37,25 @@ public class PureFunctionsJava {
         return str;
     }
 
+    public static char firstCharacter(String str) {
+        if (str != null && !str.isEmpty()) {
+            return str.charAt(0);
+        }
+        return '?';
+    }
+
+    public static double divideNumbers(double dividend, double divisor) {
+        if (Double.isNaN(dividend) || Double.isNaN(divisor)) {
+            return Double.NaN;
+        }
+
+        if (divisor == 0.0) {
+            return Double.POSITIVE_INFINITY;
+        }
+
+        return dividend / divisor;
+    }
+
     // ===========================================
     // Aufgabe 3: Eigene pure rekursive Funktionen
     // ===========================================
