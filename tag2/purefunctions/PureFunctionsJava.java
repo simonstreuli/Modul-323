@@ -1,15 +1,15 @@
 // ===========================================
 // Aufgabe 1: Beurteilung pure vs. impure Functions (Java)
 // ===========================================
-// Dokumentation (z.B. für README.md):
+// Dokumentation:
 /*
 | Aufgabe | Nur Rückgabewert | Nur abhängig von Parametern | Keine Seiteneffekte | pure/impure |
 |--------|-------------------|------------------------------|---------------------|-------------|
 | 1.1    | ✅                | ❌                           | ❌                  | impure      |
 | 1.2    | ✅                | ✅                           | ✅                  | pure        |
-| 1.3    | ✅                | ✅                           | ✅                  | pure        |
-| 1.4    | ✅                | ❌                           | ✅                  | impure      |
-| 1.5    | ✅                | ✅                           | ✅                  | pure        |
+| 1.3    | ✅                | ✅                           | ❌                    | impure        |
+| 1.4    | ✅                | ❌                           | ❌                  | impure      |
+| 1.5    | ✅                | ✅                           | ❌                   | impure        |
 | 1.6    | ✅                | ✅                           | ❌                  | impure      |
 */
 
