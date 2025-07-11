@@ -1,7 +1,6 @@
 package project.service;
 
 import project.model.Task;
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,19 +19,16 @@ public class TaskService {
                 .collect(Collectors.toUnmodifiableList());
     }
 
-    public List<Task> addTask(List<Task> tasks, Task newTask) {
-        return List.copyOf(tasks).stream()
-                .collect(Collectors.collectingAndThen(
-                        Collectors.toList(),
-                        list -> {
-                            list.add(newTask);
-                            return List.copyOf(list);
-                        }));
+    public List<String> getTitlesBeforeDate(List<Task> tasks, LocalDate date) {
+        return tasks.stream()
+                .filter(task -> task.deadline().isBefore(date))
+                .map(Task::title)
+                .collect(Collectors.toList());
     }
 
-    public List<Task> deleteTask(List<Task> tasks, Task toDelete) {
-        return tasks.stream()
-                .filter(task -> !task.equals(toDelete))
-                .collect(Collectors.toUnmodifiableList());
+    public int countTasksRecursively(List<Task> tasks) {
+        if (tasks.isEmpty())
+            return 0;
+        return 1 + countTasksRecursively(tasks.subList(1, tasks.size()));
     }
 }
